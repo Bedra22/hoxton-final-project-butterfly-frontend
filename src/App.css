@@ -4,7 +4,10 @@
 }
 
 .fq-e-pare {
+    height: 100vh;
     overflow-x: hidden;
+    /* overflow-y: auto; */
+    perspective: 20px;
 }
 
 .intro-page {
@@ -13,28 +16,35 @@
     position: relative;
     display: flex;
     justify-content: center;
-}
+    transform-style: preserve-3d;
+    z-index: -1;
 
-img {
-    position: absolute;
-    bottom: 0;
 }
 
 .bluesky {
-    width: 100%;
+    transform: translateZ(-20px) scale(2.2);
 }
 
 .img1 {
-    width: 100%;
+    transform: translateZ(-4px) scale(1.2);
+    bottom: 0;
 }
 
 .img2 {
-    width: 100%;
+    transform: translateZ(-2px) scale(1.2);
+    bottom: 0;
 }
 
+
+.bluesky,
+.img1,
+.img2,
 .img3 {
+    position: absolute;
     width: 100%;
-    transition: 200px;
+    object-fit: cover;
+    bottom: 0;
+    z-index: -1;
 }
 
 .intro-hello {
@@ -66,6 +76,11 @@ img {
 }
 
 .text-in-intro {
+    background-color: #1d1d4f;
+
+}
+
+.text-in-intro-mini {
     width: 500px;
     text-align: center;
     margin-left: 40%;
