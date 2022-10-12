@@ -6,6 +6,7 @@ import { LogInPage } from './pages/LogInPage';
 import { useEffect, useState } from 'react';
 import { BothLogSign } from './pages/BothLogSign';
 import { HomePage } from './pages/HomePage';
+import { InThHomePage } from './pages/InThHomePage';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -37,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      {user ? (<HomePage />) : (<BothLogSign signUp={signUp} />)}
+      {user ? (<InThHomePage />) : (<BothLogSign signUp={signUp} />)}
     </div>
   )
 }
