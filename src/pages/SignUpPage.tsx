@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export function FirstPage() {
+export function SignUpPage({ signUp }) {
     return (
         <div className='fq-e-pare'>
             <div className='intro-page'>
@@ -27,6 +27,24 @@ export function FirstPage() {
                         className="sign-in-form"
                         onSubmit={event => {
                             event.preventDefault()
+                            fetch('http://localhost:5000/sign-up', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    email: event.target.email.value,
+                                    password: event.target.password.value
+                                })
+                            })
+                                .then(resp => resp.json())
+                                .then(data => {
+                                    if (data.error) {
+                                        alert(data.error)
+                                    } else {
+                                        signUp(data)
+                                    }
+                                })
                         }}
                     >
                         <h1>Welcome 🦋</h1>
