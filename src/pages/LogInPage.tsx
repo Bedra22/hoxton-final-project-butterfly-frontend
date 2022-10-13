@@ -1,4 +1,4 @@
-export function LogInPage({ signUp }) {
+export function LogInPage({ setUser }) {
     return (
         <div className="login-page">
             <img src="images/pinkorange.jpg" alt="Background" />
@@ -23,8 +23,9 @@ export function LogInPage({ signUp }) {
                                 if (data.error) {
                                     alert(data.error)
                                 } else {
-                                    signUp(data.user)
+                                    setUser(data.user)
                                 }
+                                console.log(data)
                             })
                     }}
                 >

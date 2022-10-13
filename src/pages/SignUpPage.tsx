@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export function SignUpPage({ signUp }) {
+export function SignUpPage({ setUser }) {
     return (
         <div className='fq-e-pare'>
             <div className='intro-page'>
@@ -42,8 +42,9 @@ export function SignUpPage({ signUp }) {
                                     if (data.error) {
                                         alert(data.error)
                                     } else {
-                                        signUp(data)
+                                        setUser(data)
                                     }
+                                    console.log(data)
                                 })
                         }}
                     >
