@@ -39,6 +39,7 @@ function App() {
   return (
     <div className="App">
       {user ? (<InThHomePage />) : (<BothLogSign signUp={signUp} />)}
+
     </div>
   )
 }
