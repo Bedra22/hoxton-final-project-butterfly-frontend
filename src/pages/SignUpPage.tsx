@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
-export function SignUpPage({ setUser }) {
+export function SignUpPage({ setUser, setToken }) {
+    const navigate = useNavigate()
     return (
         <div className='fq-e-pare'>
             <div className='intro-page'>
@@ -43,6 +44,8 @@ export function SignUpPage({ setUser }) {
                                         alert(data.error)
                                     } else {
                                         setUser(data)
+                                        setToken(data.token)
+                                        navigate('/home')
                                     }
                                     console.log(data)
                                 })

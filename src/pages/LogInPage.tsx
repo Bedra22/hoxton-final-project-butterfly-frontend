@@ -1,4 +1,7 @@
-export function LogInPage({ setUser }) {
+import { useNavigate } from "react-router-dom"
+
+export function LogInPage({ setUser, setToken }) {
+    const navigate = useNavigate()
     return (
         <div className="login-page">
             <img src="images/pinkorange.jpg" alt="Background" />
@@ -7,7 +10,8 @@ export function LogInPage({ setUser }) {
                     className="login-form"
                     onSubmit={event => {
                         event.preventDefault()
-
+                        console.log(event.target.email.value)
+                        console.log(event.target.password.value)
                         fetch('http://localhost:5000/log-in', {
                             method: 'POST',
                             headers: {
@@ -24,6 +28,8 @@ export function LogInPage({ setUser }) {
                                     alert(data.error)
                                 } else {
                                     setUser(data.user)
+                                    setToken(data.token)
+                                    navigate('/home')
                                 }
                                 console.log(data)
                             })
@@ -36,7 +42,7 @@ export function LogInPage({ setUser }) {
                     <label>
                         <input type="password" name="password" placeholder="Enter your Password..." required />
                     </label>
-                    <button>
+                    <button >
                         Join
                     </button>
                 </form>

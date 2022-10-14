@@ -31,17 +31,17 @@ function App() {
     }
   }, [])
   console.log(user)
-  console.log("localstorage is", localStorage.usertoken)
+  console.log("UserToken is", localStorage.usertoken)
 
 
   return (
     <div className="App">
       <Routes>
-        <Route path='/signup' element={<SignUpPage setUser={setUser} />} />
+        <Route path='/signup' element={<SignUpPage setUser={setUser} setToken={setToken} />} />
         <Route path='/home' element={<HomePage
         // user={user} setUser={setUser} setToken={setToken}
         />} />
-        <Route path='/login' element={<LogInPage setUser={setUser} />} />
+        <Route path='/login' element={<LogInPage setUser={setUser} setToken={setToken} />} />
         <Route path='/' element={user ? <HomePage /> : <Navigate to='/signup' />} />
       </Routes>
     </div>
