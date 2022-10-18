@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, Navigate } from "react-router-dom"
+import { Footer } from "../components/Footer";
 import { Headers } from "../components/Headers"
 
 type allDaily = {
@@ -98,6 +99,7 @@ export function HomePage() {
                     </li>
                 </ul>
             </div>
+            <Footer />
         </div>
     )
 }
