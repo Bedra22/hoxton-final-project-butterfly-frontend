@@ -5,6 +5,10 @@ import { SignUpPage } from "./pages/SignUpPage";
 import { LogInPage } from './pages/LogInPage';
 import { useEffect, useState } from 'react';
 import { HomePage } from './pages/HomePage';
+import { Journal } from './pages/Journal';
+import { Meditation } from './pages/Meditation';
+import { Affrimaton } from './pages/Affrimation';
+import { VisionBoard } from './pages/VisionBoard';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -43,6 +47,10 @@ function App() {
         />} />
         <Route path='/login' element={<LogInPage setUser={setUser} setToken={setToken} />} />
         <Route path='/' element={user ? <HomePage /> : <Navigate to='/signup' />} />
+        <Route path='journal' element={<Journal />} />
+        <Route path='meditation' element={<Meditation />} />
+        <Route path='affrimation' element={<Affrimaton />} />
+        <Route path='visionboard' element={<VisionBoard />} />
       </Routes>
     </div>
   )
