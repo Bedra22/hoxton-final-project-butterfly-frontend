@@ -10,8 +10,6 @@ export function LogInPage({ setUser, setToken }) {
                     className="login-form"
                     onSubmit={event => {
                         event.preventDefault()
-                        console.log(event.target.email.value)
-                        console.log(event.target.password.value)
                         fetch('http://localhost:5000/log-in', {
                             method: 'POST',
                             headers: {
