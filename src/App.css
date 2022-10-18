@@ -230,6 +230,13 @@
     width: 200px;
 }
 
+.daily-challenges h2 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
 .challenges-list {
     display: grid;
     grid-auto-flow: column;

@@ -26,6 +26,7 @@ export function HomePage() {
         <div>
             <Headers />
             <div className="daily-challenges">
+                <h2>Try This Simple Daily Challenges</h2>
                 <ul className="challenges-list">
                     {
                         allDaily.map(item => (
