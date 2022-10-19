@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+
 
 export function Affrimaton() {
     const [affrimation, setAffrimtion] = useState([])
@@ -28,6 +30,17 @@ export function Affrimaton() {
                     for creating your best life!
                 </p>
                 <img src="https://cdn-icons-png.flaticon.com/128/64/64787.png" alt="" />
+            </div>
+            <div className="affrimation-list">
+                <ul>
+                    {affrimation.map(item => (
+                        <Link to={`/affrimation/${item.id}`}>
+                            <li>
+                                <h2>{item.title}</h2>
+                            </li>
+                        </Link>
+                    ))}
+                </ul>
             </div>
         </div>
     )

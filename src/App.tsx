@@ -10,6 +10,8 @@ import { Meditation } from './pages/Meditation';
 import { Affrimaton } from './pages/Affrimation';
 import { VisionBoard } from './pages/VisionBoard';
 import { EachJournal } from './pages/EachJournal';
+import { EachAffrimation } from './pages/EachAffrimation';
+import { EachMedatiton } from './pages/EachMeditation';
 
 type User = {
   id: number;
@@ -53,7 +55,9 @@ function App() {
         <Route path='/journal' element={<Journal user={user} />} />
         <Route path='/journal/:id' element={<EachJournal />} />
         <Route path='/meditation' element={<Meditation />} />
+        <Route path='/meditation/:id' element={<EachMedatiton />} />
         <Route path='/affrimation' element={<Affrimaton />} />
+        <Route path='/affrimation/:id' element={<EachAffrimation />} />
         <Route path='/visionboard' element={<VisionBoard />} />
       </Routes>
     </div>

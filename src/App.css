@@ -588,8 +588,9 @@
     background: url("https://images.pexels.com/photos/2088170/pexels-photo-2088170.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat center fixed;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-top: 30px;
+    padding-bottom: 70px;
 }
 
 .affrimation-hyrje {
@@ -609,7 +610,6 @@
 
 .affrimation-butterfly img {
     width: 100px;
-
 }
 
 .affrimation-butterfly h2 {
@@ -644,4 +644,29 @@
 .affrimation-hyrje img {
     width: 90px;
     margin-left: 46%;
+}
+
+.affrimation-list ul {
+    margin-top: 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    width: 700px;
+    margin-left: 28%;
+}
+
+.affrimation-list li {
+    background-color: rgb(219, 83, 129);
+    color: rgb(255, 231, 238);
+    padding: 30px;
+    font-size: 27px;
+    text-align: center;
+    height: 200px;
+    padding-top: 80px;
+    border-radius: 20px;
+}
+
+.affrimation-list li h2 {
+    font-family: 'Alfa Slab One', cursive;
 }
