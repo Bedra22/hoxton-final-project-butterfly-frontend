@@ -11,6 +11,7 @@ import { Affrimaton } from './pages/Affrimation';
 import { VisionBoard } from './pages/VisionBoard';
 import { EachJournal } from './pages/EachJournal';
 
+
 function App() {
   const [user, setUser] = useState(null)
   const [token, setToken] = useState(localStorage.usertoken)

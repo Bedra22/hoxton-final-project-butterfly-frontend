@@ -41,6 +41,8 @@ export function Journal({ user }: Props) {
                                     title: event.target.title.value,
                                     content: event.target.content.value
                                 })
+
+
                             })
 
                                 .then(resp => resp.json())
