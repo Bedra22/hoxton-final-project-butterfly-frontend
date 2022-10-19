@@ -14,11 +14,27 @@ type Props = {
 export function Journal({ user }: Props) {
     const [journal, setJournal] = useState<Journal[]>([])
     console.log(user)
+    console.log(journal)
     useEffect(() => {
+        getAllJournals()
+    }, [])
+
+    function getAllJournals() {
         fetch("http://localhost:5000/journal")
             .then(resp => resp.json())
-            .then(journalFromServer => setJournal(journalFromServer))
-    }, [])
+            .then(result => setJournal(result))
+    }
+    function deleteJournal(id) {
+        fetch(`http://localhost:5000/journal/${id}`, {
+            method: 'DELETE'
+        })
+            .then((result) => {
+                result.json().then(resp => console.log(resp))
+                getAllJournals()
+
+            })
+    }
+
     return (
         <div className="journal">
             <h1>
@@ -30,7 +46,7 @@ export function Journal({ user }: Props) {
                         className="create-journal"
                         onSubmit={event => {
                             event.preventDefault()
-
+                            console.log(user)
                             fetch("http://localhost:5000/journal", {
                                 method: 'POST',
                                 headers: {
@@ -70,12 +86,14 @@ export function Journal({ user }: Props) {
                 <div className="all-journals-list">
                     <ul>
                         {journal.map(item => (
-                            <Link to={`/journal/${item.id}`}>
-                                <li>
+                            <li>
+                                <Link to={`/journal/${item.id}`}>
                                     <h2>{item.title}</h2>
-                                </li>
-                            </Link>
-
+                                </Link>
+                                <button
+                                    onClick={() => deleteJournal(item.id)}
+                                >🗑️</button>
+                            </li>
                         ))}
                     </ul>
                 </div>

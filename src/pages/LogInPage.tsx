@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
-export function LogInPage({ setUser, setToken }) {
+export function LogInPage({ setUser }) {
     const navigate = useNavigate()
     return (
         <div className="login-page">
@@ -26,7 +26,7 @@ export function LogInPage({ setUser, setToken }) {
                                     alert(data.error)
                                 } else {
                                     setUser(data.user)
-                                    setToken(data.token)
+                                    localStorage.usertoken = data.token
                                     navigate('/home')
                                 }
                                 console.log(data)

@@ -11,26 +11,28 @@ import { Affrimaton } from './pages/Affrimation';
 import { VisionBoard } from './pages/VisionBoard';
 import { EachJournal } from './pages/EachJournal';
 
+type User = {
+  id: number;
+  email: string;
+  password: string;
+}
 
 function App() {
-  const [user, setUser] = useState(null)
-  const [token, setToken] = useState(localStorage.usertoken)
+  const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
-    if (token) {
+    if (localStorage.usertoken) {
       fetch('http://localhost:5000/validation', {
         headers: {
           Authorization: localStorage.usertoken
         }
       })
-
         .then(resp => resp.json())
         .then(data => {
           if (data.error) {
             alert(data.error)
           } else {
             setUser(data.user)
-            setToken(data.token)
             localStorage.usertoken = data.token
           }
         })
@@ -43,11 +45,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/signup' element={<SignUpPage setUser={setUser} setToken={setToken} />} />
+        <Route path='/signup' element={<SignUpPage setUser={setUser} />} />
         <Route path='/home' element={<HomePage user={user}
-        //  setUser={setUser} setToken={setToken}
         />} />
-        <Route path='/login' element={<LogInPage setUser={setUser} setToken={setToken} />} />
+        <Route path='/login' element={<LogInPage setUser={setUser} />} />
         <Route path='/' element={user ? <HomePage user={user} /> : <Navigate to='/signup' />} />
         <Route path='/journal' element={<Journal user={user} />} />
         <Route path='/journal/:id' element={<EachJournal />} />

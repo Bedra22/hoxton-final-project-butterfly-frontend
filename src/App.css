@@ -202,8 +202,8 @@
     font-family: 'Permanent Marker', cursive;
     font-weight: normal;
     text-align: center;
-    background: rgb(238, 202, 174);
-    background: radial-gradient(circle, rgba(238, 202, 174, 1) 0%, rgba(238, 174, 229, 0.9475140397956058) 100%);
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
 
 .fixing-butterfly {
@@ -539,6 +539,8 @@
 .all-journals-list li {
     border: solid 2px #09092a;
     border-radius: 20px;
+    display: grid;
+    grid-template-columns: 310px 40px;
     background-color: #cfe7ff;
     font-family: 'Alfa Slab One', cursive;
     color: #09092a;
@@ -546,7 +548,37 @@
     width: 400px;
 }
 
+
+
 .all-journals-list li:hover {
     color: #cfe7ff;
     background-color: #09092a;
+}
+
+.eachJournal {
+    border: solid 3px #09092a;
+    text-align: justify;
+    background-color: #cfe7ff;
+    padding: 20px;
+    margin-left: 27%;
+    border-radius: 30px;
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.eachJournal h2 {
+    font-family: 'Alfa Slab One', cursive;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.eachJournal p {
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
+
 }
