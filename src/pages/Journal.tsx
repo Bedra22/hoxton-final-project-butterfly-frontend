@@ -24,7 +24,7 @@ export function Journal({ user }: Props) {
             .then(resp => resp.json())
             .then(result => setJournal(result))
     }
-    function deleteJournal(id) {
+    function deleteJournal(id: Number) {
         fetch(`http://localhost:5000/journal/${id}`, {
             method: 'DELETE'
         })

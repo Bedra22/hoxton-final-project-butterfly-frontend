@@ -582,3 +582,66 @@
     font-family: 'Permanent Marker', cursive;
 
 }
+
+
+.affrimations {
+    background: url("https://images.pexels.com/photos/2088170/pexels-photo-2088170.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding-top: 30px;
+}
+
+.affrimation-hyrje {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2rem;
+    text-align: center;
+}
+
+.affrimation-butterfly {
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 10px;
+    width: 775px;
+    margin-left: 23%;
+}
+
+.affrimation-butterfly img {
+    width: 100px;
+
+}
+
+.affrimation-butterfly h2 {
+    font-size: 25px;
+    padding-top: 38px;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.affrimation-hyrje h1 {
+    margin: 10px;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+}
+
+.affrimation-hyrje h3 {
+    border: solid 2px rgb(219, 83, 129);
+    margin-left: 42%;
+    font-size: 20px;
+    width: 250px;
+    padding: 20px;
+}
+
+.affrimation-hyrje p {
+    padding: 30px;
+    margin-left: 27%;
+    text-align: center;
+    width: 49.5%;
+    font-size: 29px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.affrimation-hyrje img {
+    width: 90px;
+    margin-left: 46%;
+}
