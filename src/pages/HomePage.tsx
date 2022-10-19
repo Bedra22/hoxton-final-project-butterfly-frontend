@@ -9,12 +9,16 @@ type allDaily = {
     image: string;
     Users: User;
 }
-type User = {
+export type User = {
     id: number;
     email: string;
     password: string;
 }
-export function HomePage() {
+
+type Props = {
+    user: User | null;
+}
+export function HomePage({ user }: Props) {
 
     const [allDaily, setAllDaily] = useState<allDaily[]>([])
 
@@ -78,22 +82,22 @@ export function HomePage() {
                 </p>
                 <ul>
                     <li>
-                        <Link to='/journal'>
+                        <Link to={`/journal`}>
                             JOURNAL
                         </Link>
                     </li>
                     <li>
-                        <Link to='/meditation'>
+                        <Link to={`/meditation`}>
                             MEDITATION
                         </Link>
                     </li>
                     <li>
-                        <Link to='/affrimation'>
+                        <Link to={`/affrimation`}>
                             AFFRIMATION
                         </Link>
                     </li>
                     <li>
-                        <Link to='/visionboard'>
+                        <Link to={`/visionboard`}>
                             VISION BOARD
                         </Link>
                     </li>

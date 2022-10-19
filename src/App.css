@@ -452,3 +452,101 @@
     gap: 1rem;
     grid-auto-flow: column;
 }
+
+.journal {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    width: 100%;
+    height: 100vh;
+}
+
+.journal h1 {
+    padding: 20px;
+    font-size: 40px;
+    color: #1d1d4f;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+    text-align: center;
+}
+
+.all-journals {
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: 80px;
+}
+
+.creating-journal {
+    border: solid 3px #09092a;
+    text-align: center;
+    background-color: #cfe7ff;
+    margin: 20px;
+    border-radius: 30px;
+    margin-left: 80px;
+    height: 530px;
+}
+
+.creating-journal h2 {
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Alfa Slab One', cursive;
+    color: #09092a;
+}
+
+.journal-written-part {
+    display: grid;
+    grid-auto-flow: row;
+    padding: 20px;
+    font-weight: 500;
+}
+
+.journal-written-part :placeholder-shown {
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+.journal-written-part input {
+    padding: 10px;
+    background-color: transparent;
+}
+
+.journal-written-part textarea {
+    padding: 10px;
+    background-color: transparent;
+}
+
+.journal-written-part button {
+    border-radius: 50px;
+    width: 180px;
+    height: 45px;
+    background-color: #10103a;
+    color: #cfe7ff;
+    margin-left: 37%;
+    font-weight: 900;
+}
+
+.all-journals-list {
+    margin: 40px;
+    overflow-y: hidden;
+}
+
+.all-journals-list ul {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    margin-left: 10%;
+}
+
+.all-journals-list li {
+    border: solid 2px #09092a;
+    border-radius: 20px;
+    background-color: #cfe7ff;
+    font-family: 'Alfa Slab One', cursive;
+    color: #09092a;
+    padding: 20px;
+    width: 400px;
+}
+
+.all-journals-list li:hover {
+    color: #cfe7ff;
+    background-color: #09092a;
+}

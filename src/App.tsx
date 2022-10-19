@@ -9,6 +9,7 @@ import { Journal } from './pages/Journal';
 import { Meditation } from './pages/Meditation';
 import { Affrimaton } from './pages/Affrimation';
 import { VisionBoard } from './pages/VisionBoard';
+import { EachJournal } from './pages/EachJournal';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -42,15 +43,16 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/signup' element={<SignUpPage setUser={setUser} setToken={setToken} />} />
-        <Route path='/home' element={<HomePage
-        // user={user} setUser={setUser} setToken={setToken}
+        <Route path='/home' element={<HomePage user={user}
+        //  setUser={setUser} setToken={setToken}
         />} />
         <Route path='/login' element={<LogInPage setUser={setUser} setToken={setToken} />} />
-        <Route path='/' element={user ? <HomePage /> : <Navigate to='/signup' />} />
-        <Route path='journal' element={<Journal />} />
-        <Route path='meditation' element={<Meditation />} />
-        <Route path='affrimation' element={<Affrimaton />} />
-        <Route path='visionboard' element={<VisionBoard />} />
+        <Route path='/' element={user ? <HomePage user={user} /> : <Navigate to='/signup' />} />
+        <Route path='/journal' element={<Journal user={user} />} />
+        <Route path='/journal/:id' element={<EachJournal />} />
+        <Route path='/meditation' element={<Meditation />} />
+        <Route path='/affrimation' element={<Affrimaton />} />
+        <Route path='/visionboard' element={<VisionBoard />} />
       </Routes>
     </div>
   )
