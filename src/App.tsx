@@ -58,7 +58,7 @@ function App() {
         <Route path='/eachmeditation' element={<EachMedatiton />} />
         <Route path='/affrimation' element={<Affrimaton />} />
         <Route path='/affrimation/:id' element={<EachAffrimation />} />
-        <Route path='/visionboard' element={<VisionBoard />} />
+        <Route path='/visionboard' element={<VisionBoard user={user} />} />
       </Routes>
     </div>
   )

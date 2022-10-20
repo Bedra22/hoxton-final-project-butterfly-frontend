@@ -876,11 +876,12 @@
 }
 
 .box img {
-    border: 6px solid rgba(89, 60, 17, 0.721);
     border-radius: 30px;
     width: 100%;
     object-fit: contain;
 }
+
+
 
 .visionboard-title {
     display: grid;
@@ -901,4 +902,39 @@
     font-size: 35px;
     font-weight: 700;
     padding-top: 40px;
+}
+
+.create-vision-board-inputs {
+    width: 55%;
+    padding: 10px;
+    border-radius: 90px;
+    margin-top: 5%;
+    margin-bottom: 50px;
+    margin-left: 25%;
+    border: 6px solid rgba(89, 60, 17, 0.721);
+}
+
+.create-vision-board-inputs input {
+    background-color: transparent;
+    padding: 30px;
+    font-size: 20px;
+    width: 400px;
+    margin-left: 7%;
+}
+
+.create-vision-board-inputs input::placeholder {
+    color: rgba(89, 60, 17, 0.721);
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+.create-vision-board-inputs button {
+    color: #ddcebb;
+    height: 50px;
+    width: 140px;
+    margin-left: 13%;
+    font-size: 20px;
+    background-color: rgba(89, 60, 17, 0.721);
+    font-family: 'Alfa Slab One', cursive;
+    border-radius: 16px;
 }
