@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import { User } from "./HomePage";
+
 type Journal = {
     id: Number;
     title: String;
@@ -15,9 +16,11 @@ export function Journal({ user }: Props) {
     const [journal, setJournal] = useState<Journal[]>([])
     console.log(user)
     console.log(journal)
+
     useEffect(() => {
         getAllJournals()
     }, [])
+
 
     function getAllJournals() {
         fetch("http://localhost:5000/journal")
@@ -86,7 +89,7 @@ export function Journal({ user }: Props) {
                 <div className="all-journals-list">
                     <ul>
                         {journal.map(item => (
-                            <li>
+                            <li >
                                 <Link to={`/journal/${item.id}`}>
                                     <h2>{item.title}</h2>
                                 </Link>

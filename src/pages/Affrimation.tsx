@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 export function Affrimaton() {
     const [affrimation, setAffrimtion] = useState([])
-
+    useEffect(() => {
+        Aos.init({ duration: 1500 })
+    }, [])
     useEffect(() => {
         fetch("http://localhost:5000/affrimations")
             .then(resp => resp.json())
@@ -32,7 +35,7 @@ export function Affrimaton() {
                 <img src="https://cdn-icons-png.flaticon.com/128/64/64787.png" alt="" />
             </div>
             <div className="affrimation-list">
-                <ul>
+                <ul data-aos="fade-up">
                     {affrimation.map(item => (
                         <Link to={`/affrimation/${item.id}`}>
                             <li>

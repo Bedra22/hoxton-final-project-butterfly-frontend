@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { Link, Navigate } from "react-router-dom"
 import { Footer } from "../components/Footer";
 import { Headers } from "../components/Headers"
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 type allDaily = {
     id: number;
@@ -22,6 +24,9 @@ export function HomePage({ user }: Props) {
 
     const [allDaily, setAllDaily] = useState<allDaily[]>([])
 
+    useEffect(() => {
+        Aos.init({ duration: 1000 })
+    }, [])
     useEffect(() => {
         fetch("http://localhost:5000/dailychallenges")
             .then(resp => resp.json())
@@ -45,7 +50,7 @@ export function HomePage({ user }: Props) {
             </div>
             <div className="devine">
                 <img src="https://images.pexels.com/photos/276918/pexels-photo-276918.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
-                <div className="devine-text">
+                <div data-aos="fade-up" className="devine-text">
                     <p>
                         “The divine feminine and divine masculine are the sacred polarities that exist in creation, sometimes described as the heart and the brain, the earth and the spirit, the yin and the yang,”
                     </p>
@@ -56,17 +61,17 @@ export function HomePage({ user }: Props) {
                     <h1>Let's shape a more fulfilling future together</h1>
                 </div>
                 <div className="shape-life-section">
-                    <div className="shape-life-each-section">
+                    <div data-aos="fade-right" className="shape-life-each-section">
                         <img src="https://chopracentermeditation.com/assets/activating_divine_feminine/img/self.png" alt="" />
                         <h2>Heal</h2>
                         <p>Explore where you need healing and bring the power of the Divine Feminine and Musculineback into your daily existence to meet your true, whole self.</p>
                     </div>
-                    <div className="shape-life-each-section">
+                    <div data-aos="fade-down" className="shape-life-each-section">
                         <img src="https://chopracentermeditation.com/assets/activating_divine_feminine/img/relationship.png" alt="" />
                         <h2>Activate</h2>
                         <p>Tune into the Divine Feminine and Musculine within and develop trust in yourself to access the source of joy and fulfillment in your life.</p>
                     </div>
-                    <div className="shape-life-each-section">
+                    <div data-aos="fade-left" className="shape-life-each-section">
                         <img src="https://chopracentermeditation.com/assets/activating_divine_feminine/img/community.png" alt="" />
                         <h2>Unite</h2>
                         <p>Discover the effortless yet transformative power of merging the infinite potential of consciousness to action, as you encounter union with the Divine Feminine and Musculine.</p>
@@ -80,7 +85,7 @@ export function HomePage({ user }: Props) {
                 <p>
                     In this beautiful series, we will be exploring the role of the Divine Feminine and Musculine in a free meditation experience. Along the way, you'll find additional resources and support in our Healing journey to guide us individually and collectively on the path to transformation.
                 </p>
-                <ul>
+                <ul data-aos="slide-up">
                     <li>
                         <Link to={`/journal`}>
                             JOURNAL
