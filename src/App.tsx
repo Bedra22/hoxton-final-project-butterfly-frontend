@@ -55,7 +55,7 @@ function App() {
         <Route path='/journal' element={<Journal user={user} />} />
         <Route path='/journal/:id' element={<EachJournal />} />
         <Route path='/meditation' element={<Meditation />} />
-        <Route path='/meditation/:id' element={<EachMedatiton />} />
+        <Route path='/eachmeditation' element={<EachMedatiton />} />
         <Route path='/affrimation' element={<Affrimaton />} />
         <Route path='/affrimation/:id' element={<EachAffrimation />} />
         <Route path='/visionboard' element={<VisionBoard />} />

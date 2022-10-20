@@ -720,3 +720,136 @@
     font-size: 30px;
     padding-top: 50px;
 }
+
+.meditation {
+    background-color: #ffe4e32e;
+    width: 100%;
+    height: 100%;
+}
+
+.butterfly-medatition {
+    display: grid;
+    grid-auto-flow: column;
+    width: 789px;
+    padding-top: 20px;
+    margin-left: 25%;
+}
+
+.butterfly-medatition img {
+    width: 100px;
+}
+
+.butterfly-medatition h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 40px;
+}
+
+.meditation-info {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 3rem;
+}
+
+.each-meditation-info-1 {
+    display: grid;
+    grid-auto-flow: column;
+    padding: 30px;
+    margin-top: 7%;
+}
+
+.each-meditation-info-1 img {
+    margin-left: 100px;
+}
+
+.each-meditation-inf-section-1 {
+    display: grid;
+    grid-auto-flow: row;
+    text-align: justify;
+    width: 650px;
+    height: 280px;
+    padding: 44px;
+    margin-top: 7%;
+    margin-left: 10%;
+}
+
+.each-meditation-inf-section-1 h1 {
+    font-size: 30px;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.each-meditation-info-2 {
+    margin-top: 5%;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.each-meditation-info-2 img {
+    width: 100%;
+    height: 400px;
+}
+
+.each-meditation-inf-section-2 img {
+    position: relative;
+}
+
+.each-meditation-inf-section-2 h1 {
+    position: absolute;
+    font-family: 'Alegreya', serif;
+    font-weight: 500;
+    top: 192%;
+    font-size: 50px;
+    margin-left: 5%;
+    padding: 20px;
+
+}
+
+.each-meditation-inf-section-2 p {
+    position: absolute;
+    top: 206%;
+    font-size: 20px;
+    margin-left: 5%;
+    font-family: 'Alegreya', serif;
+    padding: 20px;
+    width: 400px;
+}
+
+.each-meditation-info {
+    margin-top: 7%;
+}
+
+.each-meditation-info img {
+    position: relative;
+}
+
+.each-meditation-inf-section {
+    position: absolute;
+    top: 31%;
+    margin-left: 45%;
+    text-align: end;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.each-meditation-inf-section h1 {
+    font-size: 70px;
+    color: #d3b38a;
+    font-weight: 500;
+}
+
+.each-meditation-inf-section h2 {
+    font-size: 50px;
+    color: rgb(185, 205, 198);
+    font-weight: 500;
+}
+
+.each-meditation-inf-section button {
+    width: 200px;
+    height: 60px;
+    border-radius: 40px;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(94, 113, 106);
+    background-color: rgb(185, 205, 198);
+
+}
