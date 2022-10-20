@@ -25,7 +25,7 @@ export function HomePage({ user }: Props) {
     const [allDaily, setAllDaily] = useState<allDaily[]>([])
 
     useEffect(() => {
-        Aos.init({ duration: 1000 })
+        Aos.init({ duration: 3000 })
     }, [])
     useEffect(() => {
         fetch("http://localhost:5000/dailychallenges")
