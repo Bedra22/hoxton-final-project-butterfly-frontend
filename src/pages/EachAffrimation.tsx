@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Aos from "aos";
 import "aos/dist/aos.css"
-import { Headers } from "../components/Headers";
 
 type eachAllAffrimation = {
     id: Number,
@@ -26,16 +25,18 @@ type EachAffrimation = {
 export function EachAffrimation() {
     const [eachAllAffrimation, setEachAllAffrimation] = useState<eachAllAffrimation>()
     const params = useParams()
-    console.log(eachAllAffrimation)
+
+
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, [])
+
     useEffect(() => {
         fetch(`http://localhost:5000/affrimations/${params.id}`)
             .then(resp => resp.json())
             .then(eachAffrimationFromServer => setEachAllAffrimation(eachAffrimationFromServer))
     }, [])
-    console.log(eachAllAffrimation)
+
 
     return (
         <div className="each-affrimation-section">
