@@ -20,15 +20,20 @@ export function VisionBoard({ user }: Props) {
     }, [])
 
     useEffect(() => {
-        setInterval(() => {
+        const interval = setInterval(() => {
 
             fetch("http://localhost:5000/visionboard")
                 .then(resp => resp.json())
                 .then(visionBoardFromServer => {
                     const reversed: any = Array.from(visionBoardFromServer)
                     setVisionBoard(reversed)
+                    console.log("setInterval", interval)
                 })
         }, 1000)
+        return () => {
+            clearInterval(interval)
+            console.log("ClearInterval", interval)
+        }
     }, [])
 
     useEffect(() => {

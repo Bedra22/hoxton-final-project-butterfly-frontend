@@ -1,23 +1,30 @@
 import { Howl } from "howler"
 import { useEffect } from "react"
-
+import { Link } from "react-router-dom"
+import videoBB from '../assets/videoBB.mp4'
 
 export function EachMedatiton() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-    const sound1 = new Howl({
-        src: ["https://www.epidemicsound.com/track/6dIRHJeHqt/"],
-        html5: true,
-        preload: true,
-    })
+
 
     return (
-        <div>
-            <div>
-                <div onClick={() => sound1.play()} >Play</div>
-                <div onClick={() => sound1.pause()}  >Pause</div>
+        <div className="video">
+            <video autoPlay loop muted >
+                <source src={videoBB} />
+            </video>
+            <div className="video-content">
+                <h1>COMING SOON</h1>
+                <h2>2023</h2>
+                <p>We are preparing something amazing and exciting for you. </p>
+                <p>STAY TUNED!!!</p>
+                <Link to='/home'>
+                    <button>
+                        BACK
+                    </button>
+                </Link>
             </div>
         </div>
     )
