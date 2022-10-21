@@ -509,9 +509,17 @@
     background-color: transparent;
 }
 
+.journal-written-part input:focus {
+    outline: none;
+}
+
 .journal-written-part textarea {
     padding: 10px;
     background-color: transparent;
+}
+
+.journal-written-part textarea:focus {
+    outline: none;
 }
 
 .journal-written-part button {
@@ -920,6 +928,10 @@
     font-size: 20px;
     width: 400px;
     margin-left: 7%;
+}
+
+.create-vision-board-inputs input:focus {
+    outline: none;
 }
 
 .create-vision-board-inputs input::placeholder {
