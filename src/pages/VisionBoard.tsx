@@ -15,20 +15,20 @@ type Props = {
 export function VisionBoard({ user }: Props) {
 
     const [visionBoard, setVisionBoard] = useState<VisionBoard[]>([])
-    const [image, setImage] = useState(null);
-
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:5000/visionboard")
-            .then(resp => resp.json())
-            .then(visionBoardFromServer => {
-                const reversed: any = Array.from(visionBoardFromServer)
-                setVisionBoard(reversed)
-            })
+        setInterval(() => {
 
+            fetch("http://localhost:5000/visionboard")
+                .then(resp => resp.json())
+                .then(visionBoardFromServer => {
+                    const reversed: any = Array.from(visionBoardFromServer)
+                    setVisionBoard(reversed)
+                })
+        }, 1000)
     }, [])
 
     return (
@@ -55,7 +55,7 @@ export function VisionBoard({ user }: Props) {
                             })
                         })
                             .then(resp => resp.json())
-                            .then(visionBoardFromServer => setVisionBoard(visionBoardFromServer.reverse()))
+                            .then(visionBoardFromServer => setVisionBoard(visionBoardFromServer))
 
                     }}
                 >
