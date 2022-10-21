@@ -27,6 +27,11 @@ export function HomePage({ user }: Props) {
     useEffect(() => {
         Aos.init({ duration: 3000 })
     }, [])
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     useEffect(() => {
         fetch("http://localhost:5000/dailychallenges")
             .then(resp => resp.json())

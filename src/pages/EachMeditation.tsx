@@ -1,8 +1,12 @@
 import { Howl } from "howler"
+import { useEffect } from "react"
 
 
 export function EachMedatiton() {
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     const sound1 = new Howl({
         src: ["https://www.epidemicsound.com/track/6dIRHJeHqt/"],
         html5: true,

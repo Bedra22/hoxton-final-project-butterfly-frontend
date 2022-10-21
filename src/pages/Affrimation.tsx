@@ -5,9 +5,15 @@ import "aos/dist/aos.css"
 
 export function Affrimaton() {
     const [affrimation, setAffrimtion] = useState([])
+
     useEffect(() => {
         Aos.init({ duration: 1500 })
     }, [])
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     useEffect(() => {
         fetch("http://localhost:5000/affrimations")
             .then(resp => resp.json())
