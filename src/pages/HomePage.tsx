@@ -5,6 +5,7 @@ import { Headers } from "../components/Headers"
 import Aos from "aos";
 import "aos/dist/aos.css"
 import { BackToTopButton } from "../components/BackToTopButton";
+import { DailyChallenges } from "../components/DailyChallenges";
 
 type allDaily = {
     id: number;
@@ -23,7 +24,6 @@ type Props = {
 }
 export function HomePage({ user }: Props) {
 
-    const [allDaily, setAllDaily] = useState<allDaily[]>([])
 
     useEffect(() => {
         Aos.init({ duration: 3000 })
@@ -33,17 +33,13 @@ export function HomePage({ user }: Props) {
         window.scrollTo(0, 0)
     }, [])
 
-    useEffect(() => {
-        fetch("http://localhost:5000/dailychallenges")
-            .then(resp => resp.json())
-            .then(dailyFromServer => setAllDaily(dailyFromServer))
-    }, [])
+
     return (
         <div>
             <Headers />
             <BackToTopButton />
-
-            <div className="daily-challenges">
+            <DailyChallenges />
+            {/* <div className="daily-challenges">
                 <h2>Try This Simple Daily Challenges</h2>
                 <ul className="challenges-list">
                     {
@@ -55,7 +51,7 @@ export function HomePage({ user }: Props) {
                         ))
                     }
                 </ul>
-            </div>
+            </div> */}
             <div className="devine">
                 <img src="https://images.pexels.com/photos/276918/pexels-photo-276918.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
                 <div data-aos="fade-up" className="devine-text">
