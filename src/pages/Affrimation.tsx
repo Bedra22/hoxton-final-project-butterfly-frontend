@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Aos from "aos";
 import "aos/dist/aos.css"
+import { BackToTopButton } from "../components/BackToTopButton";
 
 export function Affrimaton() {
     const [affrimation, setAffrimtion] = useState([])
@@ -51,6 +52,7 @@ export function Affrimaton() {
                     ))}
                 </ul>
             </div>
+            <BackToTopButton />
         </div>
     )
 }

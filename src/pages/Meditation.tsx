@@ -1,6 +1,7 @@
 import Aos from "aos";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { BackToTopButton } from "../components/BackToTopButton";
 import { Footer } from "../components/Footer";
 
 export function Meditation() {
@@ -47,6 +48,7 @@ export function Meditation() {
                 </div>
 
             </div>
+            <BackToTopButton />
             <Footer />
         </div>
     )

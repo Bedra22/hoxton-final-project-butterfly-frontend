@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { User } from "./HomePage";
 import Aos from "aos";
 import "aos/dist/aos.css"
+import { BackToTopButton } from "../components/BackToTopButton";
 
 type VisionBoard = {
     id: Number;
@@ -85,6 +86,7 @@ export function VisionBoard({ user }: Props) {
                     ))}
                 </ul>
             </div>
+            <BackToTopButton />
         </div>
     )
 }

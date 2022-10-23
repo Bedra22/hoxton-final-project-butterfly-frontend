@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Aos from "aos";
 import "aos/dist/aos.css"
+import { BackToTopButton } from "../components/BackToTopButton";
 
 type eachAllAffrimation = {
     id: Number,
@@ -58,6 +59,7 @@ export function EachAffrimation() {
                     ))}
                 </ul>
             </div>
+            <BackToTopButton />
         </div>
     )
 }
