@@ -4,6 +4,7 @@ import { Footer } from "../components/Footer";
 import { Headers } from "../components/Headers"
 import Aos from "aos";
 import "aos/dist/aos.css"
+import { BackToTopButton } from "../components/BackToTopButton";
 
 type allDaily = {
     id: number;
@@ -40,6 +41,8 @@ export function HomePage({ user }: Props) {
     return (
         <div>
             <Headers />
+            <BackToTopButton />
+
             <div className="daily-challenges">
                 <h2>Try This Simple Daily Challenges</h2>
                 <ul className="challenges-list">
